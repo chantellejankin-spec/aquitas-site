@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    href: '/services/meal-evaluation',
+    title: 'Monitoring, Evaluation, Accountability & Learning',
+    summary:
+      'We design and run MEAL systems and impact evaluations for development, ESG and value-chain programmes, from baseline to endline, for funders, implementing partners and community initiatives.',
+  },
+  {
+    href: '/services/social-research',
+    title: 'Applied Social & Qualitative Research',
+    summary:
+      'Interviews, participatory methods and mixed-methods field research that surface what quantitative data alone cannot: lived experience, local knowledge and the realities of communities and value chains.',
+  },
+  {
+    href: '/services/learning-dissemination',
+    title: 'Impact Frameworks, Learning & Dissemination',
+    summary:
+      'We turn evaluation findings into results frameworks, learning processes and reporting that funders, partners and communities can actually use to steer and improve their work.',
+  },
+];
+---
+
+<Layout title="Applied Research, MEAL & Impact Evaluation">
+  <section class="hero section">
+    <div class="wrap hero-grid">
+      <h1>Innovation.<br />Collaboration.<br />Impact.</h1>
+      <div class="hero-copy">
+        <p>
+          Applied social research, MEAL and impact evaluation for sustainable
+          development and responsible value chains.
+        </p>
+        <a class="pill-btn" href="#what-we-do">Learn More</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <img
+        class="hero-image"
+        src="/images/hero.jpg"
+        alt="Textured natural material, symbolic of the value chains Aquitas evaluates"
+        width="1920"
+        height="1280"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="wrap about-grid">
+      <h2>About Aquitas</h2>
+      <div>
+        <p>
+          Aquitas Consulting is an applied research and evaluation practice.
+          We specialise in MEAL (Monitoring, Evaluation, Accountability
+          &amp; Learning), impact evaluation and social research for
+          organisations working on sustainable development, ESG and
+          responsible value chains.
+        </p>
+        <p>
+          We typically work alongside the organisations that design and
+          implement projects on the ground, bringing independent,
+          methodologically rigorous evaluation and research to their
+          programmes. Implementation sits with our partners; our role stays
+          evaluation and research, which keeps our findings credible to
+          funders, partners and the communities the work is meant to serve.
+        </p>
+        <p>
+          Our approach combines social research, policy insight and
+          field-based evaluation practice. We help funders and implementing
+          partners understand what is actually working, for whom, and why,
+          and turn that understanding into learning that improves the next
+          phase of a programme.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="what-we-do" class="section what-we-do">
+    <div class="wrap">
+      <h2>What We Do</h2>
+      <p class="intro">
+        Everything we do sits under one discipline: evaluating and
+        understanding development, ESG and value-chain initiatives with
+        rigour. In practice, that spans three connected areas of work.
+      </p>
+      <div class="service-grid">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="wrap cta-inner">
+      <h2>Let&rsquo;s talk about your programme</h2>
+      <p>
+        Whether you need a MEAL system designed from scratch, an independent
+        impact evaluation, or applied research to inform your next phase,
+        we&rsquo;d like to hear about it.
+      </p>
+      <a class="pill-btn" href="/contact">Connect</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--gap);
+    align-items: end;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .hero-copy {
+    text-align: right;
+  }
+
+  .hero-copy p {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: var(--gap);
+  }
+
+  .intro {
+    max-width: 640px;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cta {
+    background: #f7f6f2;
+  }
+
+  .cta-inner {
+    text-align: center;
+    max-width: 640px;
+  }
+
+  .cta-inner p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid,
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+      text-align: left;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

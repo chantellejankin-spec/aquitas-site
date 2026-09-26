@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Impact Frameworks, Learning & Dissemination"
+  description="Turning evaluation findings into results frameworks, learning processes and reporting that partners can act on."
+>
+  <section class="section service-page">
+    <div class="wrap">
+      <p class="eyebrow"><a href="/#what-we-do">&larr; What We Do</a></p>
+      <h1>Impact Frameworks, Learning &amp; Dissemination</h1>
+      <p class="lede">
+        An evaluation that sits unread in a drawer has no impact of its own.
+        We design results frameworks and learning processes that turn
+        findings into decisions.
+      </p>
+
+      <div class="body-grid">
+        <div>
+          <h2>What this covers</h2>
+          <p>
+            Impact and results frameworks that connect a programme&rsquo;s
+            activities to its intended outcomes, written so funders,
+            implementing partners and community stakeholders can all read
+            the same document and agree on what success looks like.
+          </p>
+          <p>
+            We facilitate learning sessions with programme teams to walk
+            through evaluation findings, and we prepare dissemination formats
+            matched to each audience: funder reports, briefs, or
+            plain-language summaries for community partners.
+          </p>
+        </div>
+        <div>
+          <h2>How we work</h2>
+          <p>
+            We write for the reader who has to act on the findings. That
+            usually means shorter, clearer documents than a standard
+            evaluation report, paired with a facilitated conversation to walk
+            the team through what the findings mean.
+          </p>
+          <p>
+            Programmes often span several partners: a funder, an
+            implementing organisation and a research or evaluation partner.
+            We help keep everyone working from a shared understanding of
+            what the evidence shows.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="pill-btn" href="/contact">Talk to us about your reporting</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-page .eyebrow {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-page .eyebrow a {
+    color: var(--ink-soft);
+  }
+
+  .lede {
+    max-width: 720px;
+    font-size: 1.1rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .cta-row {
+    border-top: 1px solid rgba(40, 40, 40, 0.1);
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 800px) {
+    .body-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
